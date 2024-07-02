@@ -23,17 +23,9 @@ function calculatesFarePrice(start, destination) {
         return 0;
     } else if (feetTravelled > 400 && feetTravelled <= 2000) {
         return (feetTravelled - 400) * 0.02;
-    } else if (feetTravelled > 2000 && feetTravelled <= 2500) {
+    } else if (feetTravelled > 2000 && feetTravelled < 2500) {
         return 25;
     } else {
         return 'cannot travel that far';
     }
 }
-
-// Exporting functions if needed in a module environment
-module.exports = {
-    distanceFromHqInBlocks,
-    distanceFromHqInFeet,
-    distanceTravelledInFeet,
-    calculatesFarePrice
-};
